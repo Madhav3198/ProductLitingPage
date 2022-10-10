@@ -11,21 +11,8 @@ const Cart = ({prod}) => {
     state:{cart},dispatch,
   } = CartState();
 
-  const [cart1,setCart] = useState([]);
-
-  const handleChange = (prod, d) => {
-    const ind = cart.indexOf(prod);
-    const arr = cart;
-    arr[ind].amount += d;
-
-    if (arr[ind].amount === 0) arr[ind].amount = 1;
-    setCart([...arr]);
-  };
 
   const space={margin:20}
-  const qtyButton ={height:30,width:30,marginTop:20}
-
-
   const [total,setTotal]=useState();
 
   useEffect(()=>{
